@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include finbyz_dashboard *.css
+recursive-include finbyz_dashboard *.csv
+recursive-include finbyz_dashboard *.html
+recursive-include finbyz_dashboard *.ico
+recursive-include finbyz_dashboard *.js
+recursive-include finbyz_dashboard *.json
+recursive-include finbyz_dashboard *.md
+recursive-include finbyz_dashboard *.png
+recursive-include finbyz_dashboard *.py
+recursive-include finbyz_dashboard *.svg
+recursive-include finbyz_dashboard *.txt
+recursive-exclude finbyz_dashboard *.pyc
