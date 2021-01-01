@@ -28,7 +28,7 @@ app_include_css = ["assets/css/finbyz_dashboard.min.css"]
 app_include_js = [
 	"assets/js/finbyz_dashboard.min.js" 
 ]
-
+fixtures = ["Custom Field"]
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -131,10 +131,10 @@ app_include_js = [
 # 	"Task": "finbyz_dashboard.task.get_dashboard_data"
 # }
 page_js = {"dashboard" : "public/js/frappe/dashboard/dashboard_page.js"}
-# doctype_js = {
-#     "Dashboard": "public/js/frappe/dashboard/dashboard.js",
-# 	"Dashboard Chart": "public/js/frappe/dashboard/dashboard_chart.js",
-# }
+doctype_js = {
+    "Dashboard": "public/js/frappe/dashboard/dashboard.js",
+	"Dashboard Chart": "public/js/frappe/dashboard/dashboard_chart.js",
+}
 override_whitelisted_methods = {
 	"frappe.desk.doctype.dashboard_chart.dashboard_chart.get": "finbyz_dashboard.finbyz_dashboard.dashboard_overrides.dashboard_chart.get",
 }

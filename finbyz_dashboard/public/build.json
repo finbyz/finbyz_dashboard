@@ -1,11 +1,10 @@
 {
     "css/finbyz_dashboard.min.css": [
         "public/less/frappe/dashboard/desktop.less",
-        "public/less/frappe/dashboard/dashboard_view.less"
+        "public/less/frappe/dashboard/dashboard_view.less",
+        "public/css/finbyz_dashboard.css"
     ],
     "js/finbyz_dashboard.min.js": [
-        "public/js/frappe/dashboard/dashboard_chart.js",
-        "public/js/frappe/dashboard/dashboard.js",
         "public/js/frappe/utils/dashboard_utils.js",
         "public/js/frappe/dashboard/dashboard_view.js",
         "public/js/frappe/widgets/widget_group.js",
