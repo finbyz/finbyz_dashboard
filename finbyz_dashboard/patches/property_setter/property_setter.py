@@ -24,9 +24,10 @@ def execute():
     doc2.doctype_or_field = "DocField"
     doc2.doc_type = "Dashboard Chart"
     doc2.field_name = "type"
-    doc2.property = "reqd"
-    doc2.property_type = "Check"
-    doc2.value = "0"
+    doc2.property = "options"
+    doc2.property_type = "Text"
+    doc2.value = "Line\nBar\nPercentage\nPie\nDonut\nHeatmap"
+    doc2.default = "Line"
     doc2.insert()
 
 
@@ -39,7 +40,6 @@ def execute():
     doc3.value = "0"
     doc3.insert()
 
-
     doc4 = frappe.new_doc("Property Setter")
     doc4.doctype_or_field = "DocField"
     doc4.doc_type = "Dashboard Chart"
@@ -49,14 +49,6 @@ def execute():
     doc4.value = "1"
     doc4.insert()
 
-    doc5 = frappe.new_doc("Property Setter")
-    doc5.doctype_or_field = "DocField"
-    doc5.doc_type = "Dashboard Chart"
-    doc5.field_name = "type"
-    doc5.property = "hidden"
-    doc5.property_type = "Check"
-    doc5.value = "1"
-    doc5.insert()
 
     doc6 = frappe.new_doc("Property Setter")
     doc6.doctype_or_field = "DocField"
