@@ -82,7 +82,7 @@
    "label": "Filters Section"
   },
   {
-   "default": "0",
+   "default": "1",
    "description": "This card will be available to all Users if this is set",
    "fieldname": "is_public",
    "fieldtype": "Check",
@@ -110,7 +110,7 @@
    "label": "Stats"
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "is_standard",
    "fieldtype": "Check",
    "label": "Is Standard"

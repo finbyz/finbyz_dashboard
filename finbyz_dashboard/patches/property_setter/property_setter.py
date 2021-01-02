@@ -75,3 +75,21 @@ def execute():
     doc7.property_type = "Data"
     doc7.value = "eval: doc.timeseries && ['Count', 'Sum', 'Average'].includes(doc.chart_type)"
     doc7.insert()
+
+    doc8 = frappe.new_doc("Property Setter")
+    doc8.doctype_or_field = "DocField"
+    doc8.doc_type = "Dashboard Chart"
+    doc8.field_name = "is_standard"
+    doc8.property = "default"
+    doc8.property_type = "Text"
+    doc8.value = "1"
+    doc8.insert()
+
+    doc9 = frappe.new_doc("Property Setter")
+    doc9.doctype_or_field = "DocField"
+    doc9.doc_type = "Dashboard Chart"
+    doc9.field_name = "is_public"
+    doc9.property = "default"
+    doc9.property_type = "Text"
+    doc9.value = "1"
+    doc9.insert()
