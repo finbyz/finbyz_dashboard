@@ -21,6 +21,9 @@ def on_update(self):
 
 
 def validate(self,method):
+	if frappe.session.user != 'Administrator' and self.is_standard:
+		frappe.throw("Cannot edit Standard Dashboard. Please Contact Administrator")
+
 	if not frappe.conf.developer_mode and self.is_standard:
 		frappe.throw('Cannot edit Standard Dashboards')
 

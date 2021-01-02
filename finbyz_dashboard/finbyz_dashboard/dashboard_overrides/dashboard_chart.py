@@ -25,6 +25,9 @@ def on_update(self):
 
 
 def validate(self):
+	if frappe.session.user != 'Administrator' and self.is_standard:
+		frappe.throw("Cannot edit Standard Chart. Please Contact Administrator")
+
 	if not frappe.conf.developer_mode and self.is_standard:
 		frappe.throw('Cannot edit Standard charts')
 	if self.chart_type != 'Custom' and self.chart_type != 'Report':

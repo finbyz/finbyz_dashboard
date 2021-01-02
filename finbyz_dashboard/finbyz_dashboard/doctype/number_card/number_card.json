@@ -110,7 +110,7 @@
    "label": "Stats"
   },
   {
-   "default": "1",
+   "default": "0",
    "fieldname": "is_standard",
    "fieldtype": "Check",
    "label": "Is Standard"

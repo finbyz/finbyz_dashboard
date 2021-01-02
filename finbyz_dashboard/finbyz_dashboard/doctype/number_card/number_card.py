@@ -20,6 +20,11 @@ class NumberCard(Document):
 	def on_update(self):
 		if frappe.conf.developer_mode and self.is_standard:
 			export_to_files(record_list=[['Number Card', self.name]], record_module=self.module)
+	
+	def validate(self):
+		if frappe.session.user != 'Administrator' and self.is_standard:
+			frappe.throw("Cannot edit Standard Card. Please Contact Administrator")
+
 
 def get_permission_query_conditions(user=None):
 	if not user:
@@ -123,7 +128,7 @@ def calculate_previous_result(doc, filters):
 def create_number_card(args):
 	args = frappe.parse_json(args)
 	doc = frappe.new_doc('Number Card')
-
+	
 	doc.update(args)
 	doc.insert(ignore_permissions=True)
 	return doc

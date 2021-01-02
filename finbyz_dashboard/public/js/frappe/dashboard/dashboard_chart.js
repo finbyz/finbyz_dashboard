@@ -42,8 +42,6 @@ frappe.ui.form.on('Dashboard Chart', {
 			}
 		});
 
-		frm.set_df_property("filters_section", "hidden", 1);
-		frm.set_df_property("dynamic_filters_section", "hidden", 1);
 
 		frm.trigger('set_time_series');
 		frm.set_query('document_type', function() {
@@ -58,13 +56,18 @@ frappe.ui.form.on('Dashboard Chart', {
 		if (frm.doc.report_name) {
 			frm.trigger('set_chart_report_filters');
 		}
+
+		if(frm.doc.report_name || frm.doc.document_type){
+			frm.trigger('render_dynamic_filters_table')
+			frm.trigger('render_filters_table')
+		}
 	},
 
 	is_standard: function(frm) {
-		if (frappe.boot.developer_mode && frm.doc.is_standard) {
+		if (frappe.boot.developer_mod) {
 			frm.trigger('render_dynamic_filters_table');
 		} else {
-			frm.set_df_property("dynamic_filters_section", "hidden", 1);
+			frm.set_df_property("dynamic_filters", "hidden", 1);
 		}
 	},
 
@@ -248,7 +251,7 @@ frappe.ui.form.on('Dashboard Chart', {
 			}
 			frm.trigger('render_filters_table');
 
-			if (frappe.boot.developer_mode && frm.doc.is_standard) {
+			if (frappe.boot.developer_mode) {
 				frm.trigger('render_dynamic_filters_table');
 			}
 		});
@@ -386,7 +389,7 @@ frappe.ui.form.on('Dashboard Chart', {
 	},
 
 	render_dynamic_filters_table(frm) {
-		frm.set_df_property("dynamic_filters_section", "hidden", 0);
+		frm.set_df_property("dynamic_filters", "hidden", 0);
 
 		let is_document_type = frm.doc.chart_type !== 'Report'
 			&& frm.doc.chart_type !== 'Custom';
