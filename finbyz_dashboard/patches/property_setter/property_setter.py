@@ -9,6 +9,7 @@ def execute():
     doc.property = "depends_on"
     doc.property_type = "Data"
     doc.value = "eval: doc.chart_type !== 'Custom' && doc.chart_type !== 'Report'"
+    doc.save()
 
     doc1 = frappe.new_doc("Property Setter")
     doc1.doctype_or_field = "DocField"
@@ -17,6 +18,7 @@ def execute():
     doc1.property = "options"
     doc1.property_type = "Text"
     doc1.value = "Count\nSum\nAverage\nGroup By\nCustom\nReport"
+    doc1.save()
 
     doc2 = frappe.new_doc("Property Setter")
     doc2.doctype_or_field = "DocField"
@@ -25,6 +27,8 @@ def execute():
     doc2.property = "reqd"
     doc2.property_type = "Check"
     doc2.value = "0"
+    doc2.save()
+
 
     doc3 = frappe.new_doc("Property Setter")
     doc3.doctype_or_field = "DocField"
@@ -33,6 +37,8 @@ def execute():
     doc3.property = "reqd"
     doc3.property_type = "Check"
     doc3.value = "0"
+    doc3.save()
+
 
     doc4 = frappe.new_doc("Property Setter")
     doc4.doctype_or_field = "DocField"
@@ -41,6 +47,7 @@ def execute():
     doc4.property = "hidden"
     doc4.property_type = "Check"
     doc4.value = "1"
+    doc4.save()
 
     doc5 = frappe.new_doc("Property Setter")
     doc5.doctype_or_field = "DocField"
@@ -49,6 +56,7 @@ def execute():
     doc5.property = "hidden"
     doc5.property_type = "Check"
     doc5.value = "1"
+    doc5.save()
 
     doc6 = frappe.new_doc("Property Setter")
     doc6.doctype_or_field = "DocField"
@@ -57,6 +65,7 @@ def execute():
     doc6.property = "depends_on"
     doc6.property_type = "Data"
     doc6.value = "eval: doc.timeseries && ['Count', 'Sum', 'Average'].includes(doc.chart_type)"
+    doc6.save()
 
     doc7 = frappe.new_doc("Property Setter")
     doc7.doctype_or_field = "DocField"
@@ -65,3 +74,4 @@ def execute():
     doc7.property = "depends_on"
     doc7.property_type = "Data"
     doc7.value = "eval: doc.timeseries && ['Count', 'Sum', 'Average'].includes(doc.chart_type)"
+    doc7.save()
