@@ -181,14 +181,14 @@ def get_chart_config(chart, filters, timespan, timegrain, from_date, to_date):
 	if not to_date:
 		to_date = now_datetime()
 
-	from_date = str(from_date)
-	date_time_obj = datetime.datetime.strptime(from_date, '%Y-%m-%d %H:%M:%S.%f')
-
+	# from_date = str(from_date)
+	# date_time_obj = datetime.datetime.strptime(from_date, '%Y-%m-%d %H:%M:%S.%f')
+	
 	doctype = chart.document_type
 	datefield = chart.based_on
 	aggregate_function = get_aggregate_function(chart.chart_type)
 	value_field = chart.value_based_on or '1'
-	from_date = date_time_obj.date()
+	from_date = from_date.strftime('%Y-%m-%d')
 	to_date = to_date
 
 	filters.append([doctype, datefield, '>=', from_date, False])
