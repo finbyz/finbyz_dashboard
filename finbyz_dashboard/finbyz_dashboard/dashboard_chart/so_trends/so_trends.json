@@ -1,0 +1,41 @@
+{
+ "chart_name": "SO Trends",
+ "chart_type": "Report",
+ "creation": "2021-01-02 16:40:05.905020",
+ "custom_options": "{\"x_field\": \"item\", \"chart_type\": \"Line\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"y_field\": \"may_(amt)\"}, {\"idx\": 2, \"__islocal\": true, \"y_field\": \"jun_(amt)\"}, {\"idx\": 3, \"__islocal\": true, \"y_field\": \"jul_(amt)\"}, {\"idx\": 4, \"__islocal\": true, \"y_field\": \"aug_(amt)\"}], \"y_fields\": [\"may_(amt)\", \"jun_(amt)\", \"jul_(amt)\", \"aug_(amt)\"], \"colors\": [null, null, null, null]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{\"period\":\"Monthly\",\"based_on\":\"Item\",\"fiscal_year\":\"2020-2021\",\"company\":\"Factory - Lexcru Water Tech Pvt. Ltd.\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2021-01-02 16:40:05.968644",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "SO Trends",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Sales Order Trends",
+ "time_interval": "Yearly",
+ "timeseries": 1,
+ "timespan": "Last Year",
+ "type": "Line",
+ "use_report_chart": 0,
+ "width": "Half",
+ "x_field": "item",
+ "y_axis": [
+  {
+   "y_field": "may_(amt)"
+  },
+  {
+   "y_field": "jun_(amt)"
+  },
+  {
+   "y_field": "jul_(amt)"
+  },
+  {
+   "y_field": "aug_(amt)"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "chart_name": "Purchase Order Trends-1",
+ "chart_type": "Report",
+ "creation": "2020-12-29 18:21:28.628587",
+ "custom_options": "{\"x_field\": \"item\", \"chart_type\": \"Bar\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"y_field\": \"jun_(qty)\", \"color\": \"#ff4d4d\"}], \"y_fields\": [\"jun_(qty)\"], \"colors\": [\"#ff4d4d\"]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{\"company\":\"Factory - Lexcru Water Tech Pvt. Ltd.\",\"period\":\"Monthly\",\"fiscal_year\":\"2020-2021\",\"period_based_on\":\"posting_date\",\"based_on\":\"Item\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2021-01-02 16:06:20.326960",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "Purchase Order Trends-1",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Purchase Order Trends",
+ "time_interval": "Yearly",
+ "timeseries": 1,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "width": "Half",
+ "x_field": "item",
+ "y_axis": [
+  {
+   "color": "#ff4d4d",
+   "y_field": "jun_(qty)"
+  }
+ ]
+}

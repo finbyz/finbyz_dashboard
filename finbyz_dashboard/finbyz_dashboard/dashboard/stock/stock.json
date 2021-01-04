@@ -1,0 +1,32 @@
+{
+ "cards": [
+  {
+   "card": "Total Warehouses"
+  },
+  {
+   "card": "Total Stock Value"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Purchase Receipt Trends",
+   "width": "Half"
+  },
+  {
+   "chart": "Delivery Trends",
+   "width": "Half"
+  }
+ ],
+ "creation": "2020-12-29 14:41:56.147889",
+ "dashboard_name": "Stock",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2021-01-02 16:03:08.818562",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "Stock",
+ "owner": "Administrator"
+}

@@ -1,0 +1,22 @@
+{
+ "creation": "2020-12-29 14:18:16.929114",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Lead",
+ "dynamic_filters_json": "[[\"Lead\",\"company\",\"=\",\"frappe.defaults.get_user_default(\\\"Company\\\")\"]]",
+ "filters_json": "[[\"Lead\",\"creation\",\"Timespan\",\"last month\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "New Lead (Last 1 Month)",
+ "modified": "2021-01-02 16:07:29.137733",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "New Lead (Last 1 Month)",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

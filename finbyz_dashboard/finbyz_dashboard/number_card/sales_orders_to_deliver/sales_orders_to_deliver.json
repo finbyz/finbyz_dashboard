@@ -1,0 +1,22 @@
+{
+ "creation": "2020-12-29 14:18:16.741461",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Sales Order",
+ "dynamic_filters_json": "[[\"Sales Order\",\"company\",\"=\",\"frappe.defaults.get_user_default(\\\"Company\\\")\"]]",
+ "filters_json": "[[\"Sales Order\",\"status\",\"in\",[\"To Deliver and Bill\",\"To Deliver\",null],false],[\"Sales Order\",\"docstatus\",\"=\",\"1\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Sales Orders to Deliver",
+ "modified": "2021-01-02 16:07:28.872756",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "Sales Orders to Deliver",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Weekly",
+ "type": "Document Type"
+}

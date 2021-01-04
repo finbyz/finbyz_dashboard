@@ -132,7 +132,7 @@ fixtures = ["Custom Field"]
 # }
 page_js = {"dashboard" : "public/js/frappe/dashboard/dashboard_page.js"}
 doctype_js = {
-    "Dashboard": "public/js/frappe/dashboard/dashboard.js",
+	"Dashboard": "public/js/frappe/dashboard/dashboard.js",
 	"Dashboard Chart": "public/js/frappe/dashboard/dashboard_chart.js",
 }
 override_whitelisted_methods = {
@@ -147,7 +147,7 @@ doc_events = {
 #     'Dashboard':'finbyz_dashboard.finbyz_dashboard.dashboard_overrides.dashboard.CustomDashboard'
 # }
 
-import frappe
+# import frappe
 
 from frappe.desk.doctype.dashboard_chart.dashboard_chart import DashboardChart
 from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.dashboard_chart import on_update, validate
@@ -163,13 +163,45 @@ from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.db_query import prepa
 DatabaseQuery.prepare_filter_condition = prepare_filter_condition
 
 from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.boot import get_bootinfo_override
-frappe.boot.get_bootinfo =  get_bootinfo_override
+from frappe import boot
+boot.get_bootinfo =  get_bootinfo_override
 
 from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.data import add_to_date, compare, evaluate_filters, get_filter
-frappe.utils.data.add_to_date = add_to_date
-frappe.utils.data.compare = compare
-frappe.utils.data.evaluate_filters = evaluate_filters
-frappe.utils.data.get_filter = get_filter
+from frappe.utils import data
+data.add_to_date = add_to_date
+data.compare = compare
+data.evaluate_filters = evaluate_filters
+data.get_filter = get_filter
+
+# Purchase Order Trends Report Override For Chart
+from finbyz_dashboard.finbyz_dashboard.report.purchase_order_trends import execute as po_execute
+from erpnext.buying.report.purchase_order_trends import purchase_order_trends
+purchase_order_trends.execute = po_execute
+
+# Purchase Receipt Trends Report Override For Chart
+from finbyz_dashboard.finbyz_dashboard.report.purchase_receipt_trends import execute as pr_execute
+from erpnext.stock.report.purchase_receipt_trends import purchase_receipt_trends
+purchase_receipt_trends.execute = pr_execute
+
+# Purchase Invoice Trends Report Override For Chart
+from finbyz_dashboard.finbyz_dashboard.report.purchase_invoice_trends import execute as pi_execute
+from erpnext.accounts.report.purchase_invoice_trends import purchase_invoice_trends
+purchase_invoice_trends.execute = pi_execute
+
+# Sales Order Trends Report Override For Chart
+from finbyz_dashboard.finbyz_dashboard.report.sales_order_trends import execute as so_execute
+from erpnext.selling.report.sales_order_trends import sales_order_trends
+sales_order_trends.execute = so_execute
+
+# Delivery Note Trends Report Override For Chart
+from finbyz_dashboard.finbyz_dashboard.report.delivery_note_trends import execute as dn_execute
+from erpnext.stock.report.delivery_note_trends import delivery_note_trends
+delivery_note_trends.execute = dn_execute
+
+# Sales Invoice Trends Report Override For Chart
+from finbyz_dashboard.finbyz_dashboard.report.sales_invoice_trends import execute as si_execute
+from erpnext.accounts.report.sales_invoice_trends import sales_invoice_trends
+sales_invoice_trends.execute = si_execute
 
 # from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.migrate import migrate
 # # frappe.migrate.migrate = migrate

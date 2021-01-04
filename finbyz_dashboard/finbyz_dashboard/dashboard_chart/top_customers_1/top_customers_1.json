@@ -1,0 +1,32 @@
+{
+ "chart_name": "Top Customers-1",
+ "chart_type": "Report",
+ "creation": "2020-12-29 18:27:05.250786",
+ "custom_options": "{\"x_field\": \"apr_(qty)\", \"chart_type\": \"Bar\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"y_field\": \"total(qty)\"}], \"y_fields\": [\"total(qty)\"], \"colors\": [null]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{\"period\":\"Monthly\",\"based_on\":\"Item\",\"fiscal_year\":\"2020-2021\",\"company\":\"Factory - Lexcru Water Tech Pvt. Ltd.\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2021-01-02 16:06:20.470867",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "Top Customers-1",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Delivery Note Trends",
+ "time_interval": "Yearly",
+ "timeseries": 1,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "width": "Half",
+ "x_field": "apr_(qty)",
+ "y_axis": [
+  {
+   "y_field": "total(qty)"
+  }
+ ]
+}

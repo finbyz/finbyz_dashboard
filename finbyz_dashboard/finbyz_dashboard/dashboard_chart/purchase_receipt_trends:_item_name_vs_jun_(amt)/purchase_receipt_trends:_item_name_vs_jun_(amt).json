@@ -1,0 +1,33 @@
+{
+ "chart_name": "Purchase Receipt Trends: Item_name vs Jun_(amt)",
+ "chart_type": "Report",
+ "creation": "2020-12-29 18:24:15.684991",
+ "custom_options": "{\"x_field\": \"item_name\", \"chart_type\": \"Bar\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"y_field\": \"jun_(amt)\", \"color\": \"#ffa685\"}], \"y_fields\": [\"jun_(amt)\"], \"colors\": [\"#ffa685\"]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{\"company\":\"Factory - Lexcru Water Tech Pvt. Ltd.\",\"period\":\"Monthly\",\"fiscal_year\":\"2020-2021\",\"period_based_on\":\"posting_date\",\"based_on\":\"Item\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2021-01-02 16:06:20.423509",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "Purchase Receipt Trends: Item_name vs Jun_(amt)",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Purchase Receipt Trends",
+ "time_interval": "Yearly",
+ "timeseries": 1,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "width": "Half",
+ "x_field": "item_name",
+ "y_axis": [
+  {
+   "color": "#ffa685",
+   "y_field": "jun_(amt)"
+  }
+ ]
+}
