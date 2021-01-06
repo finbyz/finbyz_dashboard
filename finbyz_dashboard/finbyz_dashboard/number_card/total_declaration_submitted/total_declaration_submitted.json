@@ -1,5 +1,5 @@
 {
- "creation": "2020-12-29 14:18:16.247468",
+ "creation": "2020-07-22 11:56:34.575627",
  "docstatus": 0,
  "doctype": "Number Card",
  "document_type": "Employee Tax Exemption Declaration",
@@ -10,12 +10,11 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Total Declaration Submitted",
- "modified": "2021-01-02 16:07:27.974135",
+ "modified": "2020-07-22 13:22:46.001099",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Total Declaration Submitted",
  "owner": "Administrator",
- "report_function": "Sum",
  "show_percentage_stats": 1,
  "stats_time_interval": "Monthly",
  "type": "Document Type"

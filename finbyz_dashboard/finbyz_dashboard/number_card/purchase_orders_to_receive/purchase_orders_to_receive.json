@@ -1,5 +1,5 @@
 {
- "creation": "2020-12-29 14:18:16.589932",
+ "creation": "2020-07-20 21:01:02.438012",
  "docstatus": 0,
  "doctype": "Number Card",
  "document_type": "Purchase Order",
@@ -10,12 +10,11 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Purchase Orders to Receive",
- "modified": "2021-01-02 16:07:28.615367",
+ "modified": "2020-07-22 12:47:47.460080",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Purchase Orders to Receive",
  "owner": "Administrator",
- "report_function": "Sum",
  "show_percentage_stats": 1,
  "stats_time_interval": "Weekly",
  "type": "Document Type"

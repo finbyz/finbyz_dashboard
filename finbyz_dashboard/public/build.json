@@ -13,6 +13,7 @@
         "public/js/frappe/dashboard/report_view.js",
         "public/js/frappe/dashboard/query_report.js",
         "public/js/frappe/dashboard/report_utils.js",
-        "public/js/frappe/dashboard/edit_filter.html"
+        "public/js/frappe/dashboard/edit_filter.html",
+        "public/js/frappe/report_js/monthly_attendance_sheet.js"
     ]
 }

@@ -1,7 +1,8 @@
 {
  "chart_name": "Gender Diversity Ratio",
  "chart_type": "Group By",
- "creation": "2020-12-29 14:37:50.155283",
+ "creation": "2020-07-22 11:56:32.667291",
+ "custom_options": "",
  "docstatus": 0,
  "doctype": "Dashboard Chart",
  "document_type": "Employee",
@@ -13,7 +14,7 @@
  "is_public": 1,
  "is_standard": 1,
  "last_synced_on": "2020-07-22 14:27:40.143783",
- "modified": "2021-01-02 16:06:16.745015",
+ "modified": "2020-07-22 14:32:50.962459",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Gender Diversity Ratio",
@@ -24,6 +25,5 @@
  "timespan": "Last Year",
  "type": "Pie",
  "use_report_chart": 0,
- "width": "Half",
  "y_axis": []
 }

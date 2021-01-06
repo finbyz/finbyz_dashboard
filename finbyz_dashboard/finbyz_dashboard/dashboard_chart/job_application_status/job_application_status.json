@@ -1,10 +1,12 @@
 {
  "chart_name": "Job Application Status",
  "chart_type": "Group By",
- "creation": "2020-12-29 14:37:50.020645",
+ "creation": "2020-07-22 11:56:32.699696",
+ "custom_options": "",
  "docstatus": 0,
  "doctype": "Dashboard Chart",
  "document_type": "Job Applicant",
+ "dynamic_filters_json": "",
  "filters_json": "[[\"Job Applicant\",\"creation\",\"Timespan\",\"last month\",false]]",
  "group_by_based_on": "status",
  "group_by_type": "Count",
@@ -12,7 +14,7 @@
  "is_public": 1,
  "is_standard": 1,
  "last_synced_on": "2020-07-28 16:19:12.109979",
- "modified": "2021-01-02 16:06:16.448149",
+ "modified": "2020-07-28 16:19:45.279490",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Job Application Status",
@@ -23,6 +25,5 @@
  "timespan": "Last Year",
  "type": "Pie",
  "use_report_chart": 0,
- "width": "Half",
  "y_axis": []
 }

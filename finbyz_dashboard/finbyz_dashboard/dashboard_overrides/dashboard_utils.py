@@ -25,7 +25,7 @@ def sync_dashboards(app=None):
 			frappe.flags.in_import = False
 
 def make_records_in_module(app, module):
-	dashboards_path = frappe.get_module_path(module, "{module}_dashboard".format(module=module))
+	dashboards_path = frappe.get_module_path(module, "dashboard".format(module=module))
 	charts_path = frappe.get_module_path(module, "dashboard chart")
 	cards_path = frappe.get_module_path(module, "number card")
 
@@ -39,4 +39,5 @@ def make_records(path, filters=None):
 			if os.path.isdir(join(path, fname)):
 				if fname == '__pycache__':
 					continue
+				print(path)
 				import_file_by_path("{path}/{fname}/{fname}.json".format(path=path, fname=fname))

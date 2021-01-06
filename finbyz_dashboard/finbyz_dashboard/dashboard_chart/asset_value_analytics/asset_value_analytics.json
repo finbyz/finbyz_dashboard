@@ -1,7 +1,7 @@
 {
  "chart_name": "Asset Value Analytics",
  "chart_type": "Report",
- "creation": "2020-12-29 14:39:56.419349",
+ "creation": "2020-07-14 18:23:53.091233",
  "custom_options": "{\"type\": \"bar\", \"barOptions\": {\"stacked\": 1}, \"axisOptions\": {\"shortenYAxisNumbers\": 1}, \"tooltipOptions\": {}}",
  "docstatus": 0,
  "doctype": "Dashboard Chart",
@@ -9,9 +9,9 @@
  "filters_json": "{\"status\":\"In Location\",\"filter_based_on\":\"Fiscal Year\",\"period_start_date\":\"2020-04-01\",\"period_end_date\":\"2021-03-31\",\"date_based_on\":\"Purchase Date\",\"group_by\":\"--Select a group--\"}",
  "group_by_type": "Count",
  "idx": 0,
- "is_public": 0,
+ "is_public": 1,
  "is_standard": 1,
- "modified": "2021-01-02 16:06:19.850027",
+ "modified": "2020-10-28 23:15:58.432189",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Asset Value Analytics",
@@ -23,6 +23,5 @@
  "timespan": "Last Year",
  "type": "Bar",
  "use_report_chart": 1,
- "width": "Half",
  "y_axis": []
 }

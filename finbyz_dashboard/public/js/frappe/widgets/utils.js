@@ -1,3 +1,8 @@
+function is_tree(doctype) {
+	if (!doctype) return false;
+	return frappe.boot.treeviews.indexOf(doctype) != -1;
+};
+
 function generate_route(item) {
 	const type = item.type.toLowerCase()
 	if (type === "doctype") {
@@ -12,7 +17,7 @@ function generate_route(item) {
 				route = "Form/" + item.doctype;
 			} else {
 				if (!item.doc_view) {
-					if (frappe.model.is_tree(item.doctype)) {
+					if (is_tree(item.doctype)) {
 						item.doc_view = "Tree";
 					} else {
 						item.doc_view = "List";

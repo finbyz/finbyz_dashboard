@@ -1,7 +1,8 @@
 {
  "chart_name": "Designation Wise Employee Count",
  "chart_type": "Group By",
- "creation": "2020-12-29 14:37:49.931765",
+ "creation": "2020-07-22 11:56:32.790337",
+ "custom_options": "",
  "docstatus": 0,
  "doctype": "Dashboard Chart",
  "document_type": "Employee",
@@ -13,7 +14,7 @@
  "is_public": 1,
  "is_standard": 1,
  "last_synced_on": "2020-07-22 14:27:40.602783",
- "modified": "2021-01-02 16:06:16.009825",
+ "modified": "2020-07-22 14:31:49.665555",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Designation Wise Employee Count",
@@ -24,6 +25,5 @@
  "timespan": "Last Year",
  "type": "Donut",
  "use_report_chart": 0,
- "width": "Half",
  "y_axis": []
 }

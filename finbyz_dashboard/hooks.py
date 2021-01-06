@@ -203,8 +203,19 @@ from finbyz_dashboard.finbyz_dashboard.report.sales_invoice_trends import execut
 from erpnext.accounts.report.sales_invoice_trends import sales_invoice_trends
 sales_invoice_trends.execute = si_execute
 
-# from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.migrate import migrate
-# # frappe.migrate.migrate = migrate
+# Item-wise Sales History Report Override For Chart
+from finbyz_dashboard.finbyz_dashboard.report.item_wise_sales_history import execute as iws_execute
+from erpnext.selling.report.item_wise_sales_history import item_wise_sales_history
+item_wise_sales_history.execute = iws_execute
+
+# Monthly Attendance Sheet Report Override For Chart
+from finbyz_dashboard.finbyz_dashboard.report.monthly_attendance_sheet import execute as mas_execute
+from erpnext.hr.report.monthly_attendance_sheet import monthly_attendance_sheet
+monthly_attendance_sheet.execute = mas_execute
+
+from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.migrate import migrate as custom_migrate
+from frappe import migrate
+migrate.migrate = custom_migrate
 
 # from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.install_fixtures import install
 # # frappe.desk.page.setup_wizard.install_fixtures.install = install

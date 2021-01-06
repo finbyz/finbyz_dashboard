@@ -2,7 +2,8 @@
  "aggregate_function_based_on": "planned_vacancies",
  "chart_name": "Department Wise Openings",
  "chart_type": "Group By",
- "creation": "2020-12-29 14:37:49.855405",
+ "creation": "2020-07-22 11:56:32.849775",
+ "custom_options": "",
  "docstatus": 0,
  "doctype": "Dashboard Chart",
  "document_type": "Job Opening",
@@ -13,7 +14,7 @@
  "is_public": 1,
  "is_standard": 1,
  "last_synced_on": "2020-07-22 14:33:44.834801",
- "modified": "2021-01-02 16:06:15.852231",
+ "modified": "2020-07-22 14:34:45.273591",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Department Wise Openings",
@@ -24,6 +25,5 @@
  "timespan": "Last Year",
  "type": "Bar",
  "use_report_chart": 0,
- "width": "Half",
  "y_axis": []
 }
