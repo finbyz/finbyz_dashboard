@@ -4,22 +4,22 @@
    "card": "Total Outgoing Bills"
   },
   {
-   "card": "Total Outgoing Payment"
-  },
-  {
    "card": "Total Incoming Payment"
   },
   {
    "card": "Total Incoming Bills"
   },
   {
+   "card": "Total Outgoing Payment"
+  },
+  {
    "card": "Today's Outgoing Bills"
   },
   {
-   "card": "Today's Incoming Bills"
+   "card": "Today's Incoming Payment"
   },
   {
-   "card": "Today's Incoming Payment"
+   "card": "Today's Incoming Bills"
   },
   {
    "card": "Today's Outgoing Payment"
@@ -58,7 +58,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2021-01-07 12:08:49.366537",
+ "modified": "2021-01-07 13:51:13.164578",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Accounts",
