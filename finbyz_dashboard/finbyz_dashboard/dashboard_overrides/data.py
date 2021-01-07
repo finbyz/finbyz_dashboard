@@ -208,11 +208,19 @@ def get_timespan_date_range(timespan):
 		"this month": [get_first_day(nowdate(), as_str=True), nowdate()],
 		"this quarter": [get_quarter_start(nowdate(), as_str=True), nowdate()],
 		"this year": [get_year_start(nowdate(), as_str=True), nowdate()],
+		"this fiscal year":[get_start_fiscal_year_date(nowdate(), as_str=True),get_end_fiscal_year_date(nowdate(),as_str=True)],
 		"next week": [nowdate(), add_to_date(nowdate(), days=7)],
 		"next month": [nowdate(), add_to_date(nowdate(), months=1)],
 		"next quarter": [nowdate(), add_to_date(nowdate(), months=3)],
 		"next 6 months": [nowdate(), add_to_date(nowdate(), months=6)],
 		"next year": [nowdate(), add_to_date(nowdate(), years=1)],
 	}
-
 	return date_range_map.get(timespan)
+
+def get_start_fiscal_year_date(dt,as_str= False):
+	date = getdate(frappe.defaults.get_user_default("year_start_date"))
+	return date.strftime(DATE_FORMAT) if as_str else date
+
+def get_end_fiscal_year_date(dt,as_str= False):
+	date = getdate(frappe.defaults.get_user_default("year_end_date"))
+	return date.strftime(DATE_FORMAT) if as_str else date

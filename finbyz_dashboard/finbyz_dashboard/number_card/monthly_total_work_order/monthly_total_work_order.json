@@ -3,17 +3,19 @@
  "docstatus": 0,
  "doctype": "Number Card",
  "document_type": "Work Order",
- "filters_json": "[[\"Work Order\",\"docstatus\",\"=\",1],[\"Work Order\",\"creation\",\"between\",[\"2020-06-08\",\"2020-07-08\"]]]",
+ "dynamic_filters_json": "[[\"Work Order\",\"company\",\"=\",\"frappe.defaults.get_user_default(\\\"Company\\\")\"]]",
+ "filters_json": "[[\"Work Order\",\"docstatus\",\"=\",\"1\",false],[\"Work Order\",\"creation\",\"Timespan\",\"this fiscal year\",false]]",
  "function": "Count",
  "idx": 0,
  "is_public": 1,
  "is_standard": 1,
  "label": "Monthly Total Work Orders",
- "modified": "2020-07-09 12:22:25.698795",
+ "modified": "2021-01-07 12:58:51.651268",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Monthly Total Work Order",
  "owner": "Administrator",
  "show_percentage_stats": 1,
- "stats_time_interval": "Weekly"
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
 }

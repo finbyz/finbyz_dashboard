@@ -195,6 +195,7 @@ def get_date_range(operator, value):
 		'3 months': 'quarter',
 		'6 months': '6 months',
 		'1 year': 'year',
+        '1 fiscal year':'this fiscal year'
 	}
 	period_map = {
 		'previous': 'last',
@@ -202,5 +203,4 @@ def get_date_range(operator, value):
 	}
 
 	timespan = period_map[operator] + ' ' + timespan_map[value] if operator != 'timespan' else value
-
 	return get_timespan_date_range(timespan)

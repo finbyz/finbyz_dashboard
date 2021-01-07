@@ -1,13 +1,19 @@
 {
  "cards": [
   {
-   "card": "Annual Sales"
+   "card": "Today's Sales Orders to Deliver"
+  },
+  {
+   "card": "Today's Sales Orders to Bill"
   },
   {
    "card": "Sales Orders to Deliver"
   },
   {
    "card": "Sales Orders to Bill"
+  },
+  {
+   "card": "Annual Sales"
   },
   {
    "card": "Active Customers"
@@ -23,12 +29,12 @@
    "width": "Half"
   },
   {
-   "chart": "Sales Order Analysis",
+   "chart": "Top Selling Items",
    "width": "Half"
   },
   {
-   "chart": "Item-wise Annual Sales",
-   "width": "Full"
+   "chart": "Sales Order Analysis",
+   "width": "Half"
   }
  ],
  "creation": "2020-07-20 20:17:16.688162",
@@ -38,7 +44,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2020-07-22 15:31:22.299903",
+ "modified": "2021-01-07 10:22:08.281618",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Selling",

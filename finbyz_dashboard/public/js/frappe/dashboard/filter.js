@@ -534,7 +534,7 @@ frappe.ui.filter_utils = {
 		const period_map = {
 			Last: ['Week', 'Month', 'Quarter', '6 months', 'Year'],
 			Today: null,
-			This: ['Week', 'Month', 'Quarter', 'Year'],
+			This: ['Week', 'Month', 'Quarter', 'Year', 'Fiscal Year'],
 			Next: ['Week', 'Month', 'Quarter', '6 months', 'Year'],
 		};
 		let options = [];

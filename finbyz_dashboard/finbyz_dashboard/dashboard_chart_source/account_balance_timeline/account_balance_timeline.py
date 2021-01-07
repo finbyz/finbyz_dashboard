@@ -43,7 +43,7 @@ def get(chart_name = None, chart = None, no_cache = None, filters = None, from_d
 	if not to_date:
 		to_date = nowdate()
 	if not from_date:
-		if timegrain in ('Monthly', 'Quarterly'):
+		if timegrain in ('Daily','Weekly','Monthly', 'Quarterly'):
 			from_date = get_from_date_from_timespan(to_date, timespan)
 
 	# fetch dates to plot

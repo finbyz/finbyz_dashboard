@@ -3,17 +3,19 @@
  "docstatus": 0,
  "doctype": "Number Card",
  "document_type": "Job Card",
- "filters_json": "[[\"Job Card\",\"status\",\"!=\",\"Completed\"],[\"Job Card\",\"docstatus\",\"=\",1]]",
+ "dynamic_filters_json": "[[\"Job Card\",\"company\",\"=\",\"frappe.defaults.get_user_default(\\\"Company\\\")\"]]",
+ "filters_json": "[[\"Job Card\",\"status\",\"!=\",\"Completed\",false],[\"Job Card\",\"docstatus\",\"=\",\"1\",false]]",
  "function": "Count",
  "idx": 0,
  "is_public": 1,
  "is_standard": 1,
  "label": "Ongoing Job Cards",
- "modified": "2020-07-09 12:23:18.218233",
+ "modified": "2021-01-07 13:00:05.620789",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Ongoing Job Card",
  "owner": "Administrator",
  "show_percentage_stats": 1,
- "stats_time_interval": "Weekly"
+ "stats_time_interval": "Weekly",
+ "type": "Document Type"
 }

@@ -333,7 +333,7 @@ def get_next_expected_date(date, timegrain):
 def get_period_ending(date, timegrain):
 	date = getdate(date)
 	if timegrain == 'Daily':
-		pass
+		return date
 	elif timegrain == 'Weekly':
 		date = get_week_ending(date)
 	elif timegrain == 'Monthly':
