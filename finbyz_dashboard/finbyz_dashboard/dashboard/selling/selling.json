@@ -13,10 +13,13 @@
    "card": "Sales Orders to Bill"
   },
   {
-   "card": "Annual Sales"
+   "card": "Active Customers"
   },
   {
-   "card": "Active Customers"
+   "card": "Annual Sales Order"
+  },
+  {
+   "card": "Annual Sales Invoice"
   }
  ],
  "charts": [
@@ -44,7 +47,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2021-01-07 10:22:08.281618",
+ "modified": "2021-01-07 16:52:09.946815",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Selling",

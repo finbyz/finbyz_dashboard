@@ -147,42 +147,6 @@ doc_events = {
 #     'Dashboard':'finbyz_dashboard.finbyz_dashboard.dashboard_overrides.dashboard.CustomDashboard'
 # }
 
-# import compileall, os
-# compileall.compile_dir('../', force=True)
-
-import py_compile
-
-#Overrides py file
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/dashboard_overrides/dashboard_chart.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/dashboard_overrides/dashboard.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/dashboard_overrides/db_query.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/dashboard_overrides/boot.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/dashboard_overrides/data.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/report/purchase_order_trends.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/report/purchase_receipt_trends.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/report/purchase_invoice_trends.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/report/sales_order_trends.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/report/delivery_note_trends.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/report/sales_invoice_trends.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/report/item_wise_sales_history.py')
-py_compile.compile('../apps/finbyz_dashboard/finbyz_dashboard/finbyz_dashboard/report/monthly_attendance_sheet.py')
-
-# Default py file
-py_compile.compile('../apps/frappe/frappe/desk/doctype/dashboard_chart/dashboard_chart.py')
-py_compile.compile('../apps/frappe/frappe/desk/doctype/dashboard/dashboard.py')
-py_compile.compile('../apps/frappe/frappe/model/db_query.py')
-py_compile.compile('../apps/frappe/frappe/boot.py')
-py_compile.compile('../apps/frappe/frappe/utils/data.py')
-py_compile.compile('../apps/erpnext/erpnext/buying/report/purchase_order_trends/purchase_order_trends.py')
-py_compile.compile('../apps/erpnext/erpnext/stock/report/purchase_receipt_trends/purchase_receipt_trends.py')
-py_compile.compile('../apps/erpnext/erpnext/accounts/report/purchase_invoice_trends/purchase_invoice_trends.py')
-py_compile.compile('../apps/erpnext/erpnext/selling/report/sales_order_trends/sales_order_trends.py')
-py_compile.compile('../apps/erpnext/erpnext/stock/report/delivery_note_trends/delivery_note_trends.py')
-py_compile.compile('../apps/erpnext/erpnext/accounts/report/sales_invoice_trends/sales_invoice_trends.py')
-py_compile.compile('../apps/erpnext/erpnext/selling/report/item_wise_sales_history/item_wise_sales_history.py')
-py_compile.compile('../apps/erpnext/erpnext/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py')
-
-
 from frappe.desk.doctype.dashboard_chart.dashboard_chart import DashboardChart
 from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.dashboard_chart import on_update, validate
 DashboardChart.on_update = on_update

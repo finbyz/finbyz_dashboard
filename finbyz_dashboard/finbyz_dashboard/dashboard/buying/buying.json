@@ -13,10 +13,13 @@
    "card": "Purchase Orders to Bill"
   },
   {
-   "card": "Annual Purchase"
+   "card": "Annual Purchase Order"
   },
   {
    "card": "Active Suppliers"
+  },
+  {
+   "card": "Annual Purchase Invoice"
   }
  ],
  "charts": [
@@ -44,7 +47,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2021-01-07 10:28:50.581211",
+ "modified": "2021-01-07 16:56:54.702564",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Buying",
