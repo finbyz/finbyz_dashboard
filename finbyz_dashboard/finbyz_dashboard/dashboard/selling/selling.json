@@ -1,10 +1,7 @@
 {
  "cards": [
   {
-   "card": "Today's Sales Orders to Deliver"
-  },
-  {
-   "card": "Today's Sales Orders to Bill"
+   "card": "Today's Sales Orders"
   },
   {
    "card": "Sales Orders to Deliver"
@@ -47,7 +44,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2021-01-07 16:52:09.946815",
+ "modified": "2021-01-08 17:18:43.181660",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Selling",

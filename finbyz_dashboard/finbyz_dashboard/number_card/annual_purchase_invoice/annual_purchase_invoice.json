@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "base_net_total",
- "color": "#ff4d4d",
+ "color": "",
  "creation": "2021-01-07 16:53:48.177031",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Annual Purchase Invoice",
- "modified": "2021-01-07 16:57:47.236969",
+ "modified": "2021-01-08 17:19:40.487761",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Annual Purchase Invoice",

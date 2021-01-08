@@ -211,8 +211,8 @@ from finbyz_dashboard.finbyz_dashboard.report.monthly_attendance_sheet import ex
 from erpnext.hr.report.monthly_attendance_sheet import monthly_attendance_sheet
 monthly_attendance_sheet.execute = mas_execute
 
-from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.migrate import sync_dashboards
-sync_dashboards('finbyz_dashboard')
+# from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.migrate import sync_dashboards
+# sync_dashboards('finbyz_dashboard')
 
 # from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.migrate import migrate as custom_migrate
 # from frappe import migrate

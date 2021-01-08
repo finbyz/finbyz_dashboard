@@ -1,5 +1,5 @@
 {
- "color": "#ff6600",
+ "color": "",
  "creation": "2020-07-08 22:40:22.592042",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -11,7 +11,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Ongoing Job Cards",
- "modified": "2021-01-07 18:02:55.011670",
+ "modified": "2021-01-08 17:20:35.208094",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Ongoing Job Card",

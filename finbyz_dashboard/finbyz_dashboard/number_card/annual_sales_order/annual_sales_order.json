@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "base_net_total",
- "color": "#6be273",
+ "color": "",
  "creation": "2020-07-20 20:17:16.568132",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Annual Sales Order",
- "modified": "2021-01-07 16:56:07.499948",
+ "modified": "2021-01-08 17:18:12.570142",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Annual Sales Order",

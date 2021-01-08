@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "base_net_total",
- "color": "#6be273",
+ "color": "",
  "creation": "2021-01-07 16:48:24.822735",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Annual Sales Invoice",
- "modified": "2021-01-07 16:56:27.346106",
+ "modified": "2021-01-08 17:19:10.433653",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Annual Sales Invoice",
