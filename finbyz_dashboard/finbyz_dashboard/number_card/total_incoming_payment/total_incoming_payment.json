@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "base_received_amount",
- "color": "#0025FF",
+ "color": "",
  "creation": "2020-07-17 11:25:34.673195",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Total Incoming Payment",
- "modified": "2021-01-07 18:35:18.283387",
+ "modified": "2021-01-08 16:09:58.937009",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Total Incoming Payment",

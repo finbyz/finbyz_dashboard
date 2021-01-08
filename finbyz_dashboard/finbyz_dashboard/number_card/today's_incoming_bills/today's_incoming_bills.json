@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "base_net_total",
- "color": "#2948FE",
+ "color": "",
  "creation": "2021-01-07 09:54:35.376219",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Today's Incoming Bills",
- "modified": "2021-01-07 18:36:11.606297",
+ "modified": "2021-01-08 16:10:15.174605",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Today's Incoming Bills",
