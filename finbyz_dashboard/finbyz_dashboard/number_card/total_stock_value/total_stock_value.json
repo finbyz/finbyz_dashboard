@@ -1,5 +1,6 @@
 {
  "aggregate_function_based_on": "stock_value",
+ "color": "",
  "creation": "2020-07-20 21:01:04.495481",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -10,7 +11,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Total Stock Value",
- "modified": "2020-07-22 13:08:48.412001",
+ "modified": "2021-01-07 18:14:51.967952",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Total Stock Value",

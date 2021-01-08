@@ -1,4 +1,5 @@
 {
+ "color": "#ff6600",
  "creation": "2021-01-07 10:35:53.312656",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -10,7 +11,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Today's Completed Work Orders",
- "modified": "2021-01-07 12:58:11.785884",
+ "modified": "2021-01-07 18:02:44.583898",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Today's Completed Work Orders",

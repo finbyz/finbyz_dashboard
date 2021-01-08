@@ -1,4 +1,5 @@
 {
+ "color": "#ff6600",
  "creation": "2020-07-08 22:40:22.575086",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -10,7 +11,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Monthly Completed Work Orders",
- "modified": "2021-01-07 12:59:29.777710",
+ "modified": "2021-01-07 18:02:51.701522",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Monthly Completed Work Order",

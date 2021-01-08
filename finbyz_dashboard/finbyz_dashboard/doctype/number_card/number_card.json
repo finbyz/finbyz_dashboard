@@ -113,7 +113,9 @@
    "default": "0",
    "fieldname": "is_standard",
    "fieldtype": "Check",
-   "label": "Is Standard"
+   "label": "Is Standard",
+   "no_copy": 1,
+   "permlevel": 3
   },
   {
    "depends_on": "eval: doc.is_standard",
@@ -183,7 +185,7 @@
    "options": "Sum\nAverage\nMinimum\nMaximum"
   }
  ],
- "modified": "2020-12-30 10:14:05.066050",
+ "modified": "2021-01-08 11:14:17.033207",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Number Card",
@@ -221,6 +223,18 @@
    "report": 1,
    "role": "All",
    "share": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 3,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
   }
  ],
  "search_fields": "label, document_type",

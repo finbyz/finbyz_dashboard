@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "base_net_total",
- "color": "#6be273",
+ "color": "#7575ff",
  "creation": "2020-07-17 11:25:34.725416",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Total Outgoing Bills",
- "modified": "2021-01-07 12:33:06.290257",
+ "modified": "2021-01-08 14:27:30.340899",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Total Outgoing Bills",

@@ -1,6 +1,6 @@
 {
  "aggregate_function_based_on": "base_paid_amount",
- "color": "#ff4d4d",
+ "color": "#0025FF",
  "creation": "2021-01-07 09:46:16.355290",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -12,7 +12,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Today's Outgoing Payment",
- "modified": "2021-01-07 12:40:53.485249",
+ "modified": "2021-01-07 18:33:57.230872",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Today's Outgoing Payment",

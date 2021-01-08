@@ -1,4 +1,5 @@
 {
+ "color": "",
  "creation": "2020-07-20 21:01:04.422436",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -9,7 +10,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Total Active Items",
- "modified": "2020-07-22 13:08:30.430677",
+ "modified": "2021-01-07 18:15:09.002037",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Total Active Items",

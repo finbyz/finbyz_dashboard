@@ -1,4 +1,5 @@
 {
+ "color": "",
  "creation": "2020-07-20 21:01:04.457598",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -10,7 +11,7 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Total Warehouses",
- "modified": "2021-01-07 12:55:39.144799",
+ "modified": "2021-01-07 18:15:04.687123",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Total Warehouses",

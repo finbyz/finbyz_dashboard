@@ -1,4 +1,5 @@
 {
+ "color": "#ff6600",
  "creation": "2020-07-08 22:40:22.606867",
  "docstatus": 0,
  "doctype": "Number Card",
@@ -9,11 +10,12 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Monthly Quality Inspections",
- "modified": "2020-07-09 12:23:34.838154",
+ "modified": "2021-01-07 18:02:58.661271",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Monthly Quality Inspection",
  "owner": "Administrator",
  "show_percentage_stats": 1,
- "stats_time_interval": "Weekly"
+ "stats_time_interval": "Weekly",
+ "type": "Document Type"
 }

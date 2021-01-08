@@ -1,0 +1,22 @@
+{
+ "creation": "2021-01-08 11:18:43.679439",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "dynamic_filters_json": "{\"company\":\"frappe.defaults.get_user_default(\\\"Company\\\")\",\"from_date\":\"frappe.utils.nowdate()\",\"to_date\":\"frappe.utils.nowdate()\"}",
+ "filters_json": "{\"from_date\":\"2020-12-08\",\"to_date\":\"2021-01-08\"}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Stock Balance",
+ "modified": "2021-01-08 11:21:34.234501",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "Stock Balance",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "report_name": "Stock Balance",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}
