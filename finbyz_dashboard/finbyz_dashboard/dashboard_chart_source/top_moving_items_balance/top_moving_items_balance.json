@@ -1,0 +1,13 @@
+{
+ "creation": "2021-01-09 10:51:25.668756",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-01-09 10:51:45.571428",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "Top Moving Items Balance",
+ "owner": "Administrator",
+ "source_name": "Top Moving Items Balance",
+ "timeseries": 0
+}

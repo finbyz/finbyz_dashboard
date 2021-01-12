@@ -17,11 +17,14 @@
   },
   {
    "card": "Annual Sales Invoice"
+  },
+  {
+   "card": "Items to Deliver"
   }
  ],
  "charts": [
   {
-   "chart": "Sales Order Trends",
+   "chart": "Sales Invoice Trends",
    "width": "Full"
   },
   {
@@ -31,6 +34,10 @@
   {
    "chart": "Top Selling Items",
    "width": "Half"
+  },
+  {
+   "chart": "Top Sales Item To Deliver",
+   "width": "Full"
   },
   {
    "chart": "Sales Order Analysis",
@@ -44,7 +51,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2021-01-08 17:18:43.181660",
+ "modified": "2021-01-11 15:52:36.430569",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Selling",

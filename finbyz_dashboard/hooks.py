@@ -211,6 +211,11 @@ from finbyz_dashboard.finbyz_dashboard.report.monthly_attendance_sheet import ex
 from erpnext.hr.report.monthly_attendance_sheet import monthly_attendance_sheet
 monthly_attendance_sheet.execute = mas_execute
 
+#Gross Profit Report Override For Chart
+from finbyz_dashboard.finbyz_dashboard.report.gross_profit import execute as gp_execute
+from erpnext.accounts.report.gross_profit import gross_profit
+gross_profit.execute = gp_execute
+
 # from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.migrate import sync_dashboards
 # sync_dashboards('finbyz_dashboard')
 

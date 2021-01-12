@@ -23,6 +23,9 @@
   },
   {
    "card": "Overdue POs"
+  },
+  {
+   "card": "Items to Receive"
   }
  ],
  "charts": [
@@ -50,7 +53,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2021-01-08 14:42:36.341982",
+ "modified": "2021-01-11 10:06:39.133014",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Buying",

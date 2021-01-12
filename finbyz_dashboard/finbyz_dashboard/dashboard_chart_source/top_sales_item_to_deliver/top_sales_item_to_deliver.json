@@ -1,0 +1,13 @@
+{
+ "creation": "2021-01-09 15:16:57.546338",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-01-09 15:16:57.546338",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "Top Sales Item To Deliver",
+ "owner": "Administrator",
+ "source_name": "Top Sales Item To Deliver",
+ "timeseries": 0
+}
