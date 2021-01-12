@@ -122,7 +122,8 @@
    "fieldname": "module",
    "fieldtype": "Link",
    "label": "Module",
-   "options": "Module Def"
+   "options": "Module Def",
+   "permlevel": 3
   },
   {
    "fieldname": "dynamic_filters_json",
