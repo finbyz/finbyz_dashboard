@@ -49,10 +49,9 @@
  "doctype": "Dashboard",
  "idx": 0,
  "is_default": 0,
- "is_standard": 1,
+ "is_standard": 0,
  "modified": "2021-01-06 17:16:09.533043",
  "modified_by": "Administrator",
- "module": "Finbyz Dashboard",
  "name": "CRM",
  "owner": "Administrator"
 }

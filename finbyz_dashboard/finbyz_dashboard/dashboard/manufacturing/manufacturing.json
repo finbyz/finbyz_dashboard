@@ -47,10 +47,9 @@
  "doctype": "Dashboard",
  "idx": 0,
  "is_default": 0,
- "is_standard": 1,
+ "is_standard": 0,
  "modified": "2021-01-07 10:37:26.917884",
  "modified_by": "Administrator",
- "module": "Finbyz Dashboard",
  "name": "Manufacturing",
  "owner": "Administrator"
 }

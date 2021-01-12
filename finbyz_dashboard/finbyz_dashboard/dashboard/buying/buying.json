@@ -30,7 +30,7 @@
  ],
  "charts": [
   {
-   "chart": "Purchase Order Trends",
+   "chart": "Purchase Invoice Trends",
    "width": "Full"
   },
   {
@@ -52,10 +52,9 @@
  "doctype": "Dashboard",
  "idx": 0,
  "is_default": 0,
- "is_standard": 1,
- "modified": "2021-01-11 10:06:39.133014",
+ "is_standard": 0,
+ "modified": "2021-01-12 11:54:50.686848",
  "modified_by": "Administrator",
- "module": "Finbyz Dashboard",
  "name": "Buying",
  "owner": "Administrator"
 }
