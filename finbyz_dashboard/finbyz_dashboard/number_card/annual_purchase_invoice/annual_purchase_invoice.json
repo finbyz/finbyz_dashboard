@@ -12,13 +12,13 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Annual Purchase Invoice",
- "modified": "2021-01-08 17:19:40.487761",
+ "modified": "2021-01-12 10:08:20.584740",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Annual Purchase Invoice",
  "owner": "Administrator",
  "report_function": "Sum",
  "show_percentage_stats": 1,
- "stats_time_interval": "Monthly",
+ "stats_time_interval": "Yearly",
  "type": "Document Type"
 }
