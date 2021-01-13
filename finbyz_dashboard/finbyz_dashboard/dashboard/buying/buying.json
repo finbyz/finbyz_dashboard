@@ -44,6 +44,10 @@
   {
    "chart": "Purchase Order Analysis",
    "width": "Half"
+  },
+  {
+    "chart": "Item Group Wise Purchase",
+    "width": "Half"
   }
  ],
  "creation": "2020-07-20 21:01:02.541065",
