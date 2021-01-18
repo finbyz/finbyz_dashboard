@@ -120,7 +120,7 @@ def get_chart_data(data, filters):
 		return []
 
 	labels, datapoints = [], []
-	if not filters.get('item_group') == " ":
+	if not filters.get('item_group'):
 		return None
 	lst_data = []
 	for row in data:
