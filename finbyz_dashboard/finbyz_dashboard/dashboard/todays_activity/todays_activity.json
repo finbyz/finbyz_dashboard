@@ -1,0 +1,65 @@
+{
+ "cards": [
+  {
+   "card": "Today's Sales Orders"
+  },
+  {
+   "card": "Today's Outgoing Bills"
+  },
+  {
+   "card": "Today's Purchase Orders"
+  },
+  {
+   "card": "Today's Incoming Bills"
+  },
+  {
+   "card": "Today's Outgoing Payment"
+  },
+  {
+   "card": "Today's Incoming Payment"
+  },
+  {
+   "card": "Today's Work Orders"
+  },
+  {
+   "card": "Today's Journal Entries"
+  },
+  {
+   "card": "Today's Stock Entries"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Today's Activity Analysis",
+   "width": "Full"
+  },
+  {
+   "chart": "Sales Invoice Trends",
+   "width": "Half"
+  },
+  {
+   "chart": "Purchase Invoice Trends",
+   "width": "Half"
+  },
+  {
+   "chart": "Amount Received",
+   "width": "Half"
+  },
+  {
+   "chart": "Amount Paid",
+   "width": "Half"
+  }
+ ],
+ "creation": "2021-01-13 14:48:34.517297",
+ "dashboard_name": "Todays Activity",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2021-01-18 12:03:12.040734",
+ "modified_by": "Administrator",
+ "module": "Finbyz Dashboard",
+ "name": "Todays Activity",
+ "owner": "Administrator"
+}

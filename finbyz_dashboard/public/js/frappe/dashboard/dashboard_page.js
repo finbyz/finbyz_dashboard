@@ -87,7 +87,7 @@ class CusDashboard {
 			'finbyz_dashboard.finbyz_dashboard.dashboard_overrides.dashboard.get_permitted_charts'
 		).then(charts => {
 			if (!charts.length) {
-				frappe.msgprint(__('No Permitted Charts on this Dashboard'), __('No Permitted Charts'))
+				//frappe.msgprint(__('No Permitted Charts on this Dashboard'), __('No Permitted Charts'))
 			}
 
 			frappe.dashboard_utils.get_dashboard_settings().then((settings) => {
