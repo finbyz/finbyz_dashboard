@@ -77,6 +77,15 @@ def execute():
     doc9.value = "1"
     doc9.insert()
 
+    doc10 = frappe.new_doc("Property Setter")
+    doc10.doctype_or_field = "DocField"
+    doc10.doc_type = "Dashboard"
+    doc10.field_name = "charts"
+    doc10.property = "reqd"
+    doc10.property_type = "Check"
+    doc10.value = "0"
+    doc10.insert()
+
     # doc10 = frappe.new_doc("Custom DocPerm")
     # doc10.parent = "Dashboard Chart"
     # doc10.role = "System Manager"
