@@ -56,10 +56,9 @@
  "doctype": "Dashboard",
  "idx": 0,
  "is_default": 0,
- "is_standard": 1,
+ "is_standard": 0,
  "modified": "2021-01-18 12:03:12.040734",
  "modified_by": "Administrator",
- "module": "Finbyz Dashboard",
  "name": "Todays Activity",
  "owner": "Administrator"
 }
