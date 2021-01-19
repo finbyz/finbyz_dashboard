@@ -130,7 +130,10 @@ fixtures = ["Custom Field"]
 # override_doctype_dashboards = {
 # 	"Task": "finbyz_dashboard.task.get_dashboard_data"
 # }
-page_js = {"dashboard" : "public/js/frappe/dashboard/dashboard_page.js"}
+page_js = {
+	"dashboard" : "public/js/frappe/dashboard/dashboard_page.js",
+	"user-profile":"public/js/frappe/dashboard/user_profile.js"
+}
 doctype_js = {
 	"Dashboard": "public/js/frappe/dashboard/dashboard.js",
 	"Dashboard Chart": "public/js/frappe/dashboard/dashboard_chart.js",

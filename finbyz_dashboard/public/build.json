@@ -14,6 +14,7 @@
         "public/js/frappe/dashboard/query_report.js",
         "public/js/frappe/dashboard/report_utils.js",
         "public/js/frappe/dashboard/edit_filter.html",
+        "public/js/frappe/utils/utils.js",
         "public/js/frappe/report_js/monthly_attendance_sheet.js",
         "public/js/frappe/report_js/item_wise_purchase_register.js"
     ]
