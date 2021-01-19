@@ -46,12 +46,12 @@ def get(chart_name = None, chart = None, no_cache = None, filters = None, from_d
 	for sle in stock_ledger_entries:
 		item_code_tuple.append(sle.item_code)
 
-	tuple_item_code = tuple(item_code_tuple)
+	tuple_item_code = ", ".join("'{}'".format(i) for i in item_code_tuple)
 	balance_qty_dict = frappe.db.sql("""
 		select bin.item_code, sum(bin.{bal_or_qty}) as balance
 		from `tabBin` as bin
 		{join_con_bin}
-		where bin.item_code in {tuple_item_code}{where_con_bin}
+		where bin.item_code in ({tuple_item_code}){where_con_bin}
 		group by bin.item_code
 	""".format(bal_or_qty=bal_or_qty, join_con_bin=join_con_bin, tuple_item_code=tuple_item_code,where_con_bin=where_con_bin), as_dict=1)	
 
