@@ -11,7 +11,7 @@ def execute(filters=None):
 	columns, data = [], []
 	columns = get_columns()
 	filters = frappe.parse_json(filters)
-	if filters.get('timespan') and filters.get('use_timespan')==1:
+	if filters.get('timespan') and not filters.timespan == "":
 		filters.from_date, filters.to_date = get_timespan_date_range(filters.timespan)
 	data = get_data(filters)
 	chart = get_chart_data(data, filters)
