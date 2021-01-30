@@ -24,8 +24,6 @@ def get_columns():
 		{ "label": _("Date"),"fieldname": "Date","fieldtype": "Date","width": 100},
 		{ "label": _("Created By"),"fieldname": "Created By","fieldtype": "Link","options":"User","width": 120},
 		{ "label": _("Title"),"fieldname": "Title","fieldtype": "Data","width": 110},
-		{ "label": _("Contact Person"),"fieldname": "Contact Person","fieldtype": "Link","options":"Contact","width": 120},
-		{ "label": _("Mobile No"),"fieldname": "Mobile No","fieldtype": "Data","width": 100},
 		{ "label": _("Item Name"),"fieldname": "Item Name","fieldtype": "Data","width": 150},
 		{ "label": _("Amount"),"fieldname": "Amount","fieldtype": "Currency","width": 120},
 		{ "label": _("Status"),"fieldname": "Status","fieldtype": "Data","width": 100},
@@ -47,8 +45,8 @@ def get_columns():
 
 def get_data(filters):
 
-	doctype_list = ['Quotation', 'Sales Order', 'Sales Invoice', 'Purchase Invoice', 'Purchase Order', 'Delivery Note', 'Purchase Receipt']
-
+	doctype_list = ['Quotation', 'Sales Order', 'Sales Invoice', 'Purchase Invoice', 'Purchase Order', 'Delivery Note', 'Purchase Receipt','Stock Entry']
+	child_doctype_list = ['Quotation Item', 'Sales Order Item', 'Sales Invoice Item', 'Purchase Invoice Item', 'Purchase Order Item', 'Delivery Note Item', 'Purchase Receipt Item','Stock Entry Detail']
 	doctype = []
 
 	if filters.doctype in doctype_list:
@@ -59,7 +57,7 @@ def get_data(filters):
 	transaction_date = ['Quotation', 'Sales Order', 'Purchase Order']
 
 	data = []
-	for doc in doctype:
+	for idx,doc in enumerate(doctype):
 		conditions = ''
 		date = 'posting_date'
 		if doc in transaction_date:
@@ -71,7 +69,7 @@ def get_data(filters):
 		
 		dt = frappe.db.sql("""
 			SELECT
-				name as 'ID', {date} as 'Date', owner as 'Created By', title as 'Title', contact_person as 'Contact Person', contact_mobile as 'Mobile No', status as 'Status'
+				name as 'ID', {date} as 'Date', owner as 'Created By', title as 'Title'
 			FROM
 				`tab{doc}`
 			WHERE
@@ -86,7 +84,7 @@ def get_data(filters):
 
 		for row in d:
 			row["Document"] = doc
-			id = insert_items(dt, row, doc, id+1)
+			id = insert_items(dt, row, child_doctype_list[idx], id+1)
 
 		data += dt
 
@@ -98,7 +96,7 @@ def insert_items(data, row, doc, id):
 		SELECT
 			item_code as 'Item Name', amount as 'Amount', owner as 'Owner'
 		FROM
-			`tab{0} Item`
+			`tab{0}`
 		WHERE
 			parent = '{1}' """.format(doc, row['ID']), as_dict=1)
 
