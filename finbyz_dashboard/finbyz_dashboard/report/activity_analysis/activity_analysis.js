@@ -5,6 +5,13 @@
 frappe.query_reports["Activity Analysis"] = {
 	"filters": [
 		{
+			"fieldname":"based_on",
+			"label": __("Based On"),
+			"fieldtype": "Select",
+			"options": ["Creation Date","Posting Date"],
+			"default": "Creation Date"
+		},
+		{
 			"fieldname":"from_date",
 			"label": __("From Date"),
 			"fieldtype": "Date",

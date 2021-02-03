@@ -22,25 +22,11 @@ def get_columns():
 		{ "label": _("Document"),"fieldname": "Document","fieldtype": "Data","width": 100},
 		{ "label": _("ID"),"fieldname": "ID","fieldtype": "Dynamic Link","options":"Document","width": 100},
 		{ "label": _("Date"),"fieldname": "Date","fieldtype": "Date","width": 100},
-		{ "label": _("Created By"),"fieldname": "Created By","fieldtype": "Link","options":"User","width": 120},
+		{ "label": _("Created By"),"fieldname": "Created By","fieldtype": "Link","options":"User","width": 150},
 		{ "label": _("Title"),"fieldname": "Title","fieldtype": "Data","width": 110},
-		{ "label": _("Item Name"),"fieldname": "Item Name","fieldtype": "Data","width": 150},
-		{ "label": _("Amount"),"fieldname": "Amount","fieldtype": "Currency","width": 120},
-		{ "label": _("Status"),"fieldname": "Status","fieldtype": "Data","width": 100},
-
+		{ "label": _("Item Name"),"fieldname": "Item Name","fieldtype": "Data","width": 180},
+		{ "label": _("Amount"),"fieldname": "Amount","fieldtype": "Currency","width": 150}
 	]
-	# columns = [
-	# 	_("Document") + ":Data:100",
-	# 	_("ID") + ":Dynamic Link/"+ _("Document") +":100",
-	# 	_("Date") + ":Date:100",
-	# 	_("Created By") + ":Link/User:120",
-	# 	_("Title") + ":Data:110",
-	# 	_("Contact Person") + ":Link/Contact:120",
-	# 	_("Mobile No") + "::100",
-	# 	_("Item Name") + ":Data:150",
-	# 	_("Amount") + ":Currency:120",
-	# 	_("Status") + "::100", 
-	# ]
 	return columns
 
 def get_data(filters):
@@ -60,9 +46,12 @@ def get_data(filters):
 	data = []
 	for idx,doc in enumerate(doctype):
 		conditions = ''
-		date = 'posting_date'
-		if doc in transaction_date:
-			date = 'transaction_date'
+		if filters.based_on == "Creation Date":
+			date = 'CAST(creation AS DATE)'
+		else:
+			date = 'posting_date'
+			if doc in transaction_date:
+				date = 'transaction_date'
 
 		if filters.from_date: conditions += " and {0} >= '{1}'".format(date, filters.from_date)
 		if filters.to_date: conditions += " and {0} <= '{1}'".format(date, filters.to_date)
