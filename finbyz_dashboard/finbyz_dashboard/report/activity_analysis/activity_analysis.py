@@ -46,6 +46,7 @@ def get_columns():
 def get_data(filters):
 
 	doctype_list = ['Quotation', 'Sales Order', 'Sales Invoice', 'Purchase Invoice', 'Purchase Order', 'Delivery Note', 'Purchase Receipt','Stock Entry']
+	
 	child_doctype_list = ['Quotation Item', 'Sales Order Item', 'Sales Invoice Item', 'Purchase Invoice Item', 'Purchase Order Item', 'Delivery Note Item', 'Purchase Receipt Item','Stock Entry Detail']
 	doctype = []
 
