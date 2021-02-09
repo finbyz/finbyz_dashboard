@@ -5,6 +5,13 @@
 frappe.query_reports["Activity Analysis"] = {
 	"filters": [
 		{
+			"fieldname":"based_on",
+			"label": __("Based On"),
+			"fieldtype": "Select",
+			"options": ["Creation Date","Posting Date"],
+			"default": "Creation Date"
+		},
+		{
 			"fieldname":"from_date",
 			"label": __("From Date"),
 			"fieldtype": "Date",
@@ -31,7 +38,8 @@ frappe.query_reports["Activity Analysis"] = {
 			"label": __("Timespan"),
 			"fieldtype": "Select",
 			"width": "80",
-			"options":"\nlast week\nlast month\nlast quarter\nlast 6 months\nlast year\ntoday\nthis week\nthis month\nthis quarter\nthis year\nthis fiscal year\nnext week\nnext month\nnext quarter\nnext 6 months\nnext year"
+			"options":"\nlast week\nlast month\nlast quarter\nlast 6 months\nlast year\ntoday\nthis week\nthis month\nthis quarter\nthis year\nthis fiscal year",
+			"default": "last month"
 		}
 	]
 }

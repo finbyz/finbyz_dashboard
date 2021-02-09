@@ -706,7 +706,7 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 
 	show_warning_or_generate_report() {
 		frappe.xcall(
-			'frappe.core.doctype.prepared_report.prepared_report.get_reports_in_queued_state',
+			'finbyz_dashboard.finbyz_dashboard.dashboard_overrides.prepared_report.get_reports_in_queued_state',
 			{
 				filters: this.get_filter_values(),
 				report_name: this.report_name,
@@ -762,7 +762,7 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 	delete_old_queued_reports() {
 		this.prepared_report_dialog.hide();
 		frappe.xcall(
-			'frappe.core.doctype.prepared_report.prepared_report.delete_prepared_reports',
+			'finbyz_dashboard.finbyz_dashboard.dashboard_overrides.prepared_report.delete_prepared_reports',
 			{
 				reports: this.queued_prepared_reports,
 			}

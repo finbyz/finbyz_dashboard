@@ -1,5 +1,5 @@
 {
- "based_on": "modified",
+ "based_on": "planned_start_date",
  "chart_name": "Produced Quantity",
  "chart_type": "Sum",
  "color": "#45F9EC",
@@ -14,8 +14,8 @@
  "idx": 0,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2021-01-06 16:55:44.875490",
- "modified": "2021-01-06 16:55:59.627931",
+ "last_synced_on": "2021-02-02 15:50:01.503276",
+ "modified": "2021-02-03 10:29:35.353662",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Produced Quantity",
@@ -26,6 +26,6 @@
  "timespan": "Last Year",
  "type": "Line",
  "use_report_chart": 0,
- "value_based_on": "produced_qty",
+ "value_based_on": "produced_quantity",
  "y_axis": []
 }

@@ -134,6 +134,8 @@ page_js = {
 	"dashboard" : "public/js/frappe/dashboard/dashboard_page.js",
 	"user-profile":"public/js/frappe/dashboard/user_profile.js"
 }
+
+after_install = "finbyz_dashboard.finbyz_dashboard.dashboard_overrides.after_install.after_install"
 doctype_js = {
 	"Dashboard": "public/js/frappe/dashboard/dashboard.js",
 	"Dashboard Chart": "public/js/frappe/dashboard/dashboard_chart.js",
