@@ -10,7 +10,7 @@ frappe.query_reports["Activity Analysis"] = {
 			"fieldtype": "Select",
 			"options": ["Creation Date","Posting Date"],
 			"default": "Creation Date"
-		},
+		},	
 		{
 			"fieldname":"from_date",
 			"label": __("From Date"),
@@ -25,7 +25,7 @@ frappe.query_reports["Activity Analysis"] = {
 			"fieldname": "doctype",
 			"label": __("DocType"),
 			"fieldtype": "Select",
-			"options": "\nQuotation\nSales Order\nSales Invoice\nPurchase Order\nPurchase Invoice\nDelivery Note\nPurchase Receipt"
+			"options": "\nQuotation\nPurchase Order\nPurchase Receipt\nPurchase Invoice\nSales Order\nDelivery Note\nSales Invoice\nStock Entry"
 		},
 		{
 			"fieldname": "user",
@@ -40,6 +40,11 @@ frappe.query_reports["Activity Analysis"] = {
 			"width": "80",
 			"options":"\nlast week\nlast month\nlast quarter\nlast 6 months\nlast year\ntoday\nthis week\nthis month\nthis quarter\nthis year\nthis fiscal year",
 			"default": "last month"
-		}
+		},
+		{
+			"fieldname":"show_details",
+			"label": __("Show Details"),
+			"fieldtype": "Check",
+		},		
 	]
 }
