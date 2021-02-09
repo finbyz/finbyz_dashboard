@@ -231,13 +231,13 @@ def get_chart_data(user_list,user_item_list,users,filters):
 
 	if total_entries:
 		datasets.append({
-			'title': "Total Entries",
+			'name': "Total Entries",
 			'values': total_entries
 		})
 	
 	if total_items:
 		datasets.append({
-			'title': "Total Items",
+			'name': "Total Items",
 			'values': total_items
 		})
 
