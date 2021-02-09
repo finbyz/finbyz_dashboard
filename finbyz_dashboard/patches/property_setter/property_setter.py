@@ -86,6 +86,15 @@ def execute():
     doc10.value = "0"
     doc10.insert()
 
+    doc11 = frappe.new_doc("Property Setter")
+    doc11.doctype_or_field = "DocField"
+    doc11.doc_type = "Dashboard Chart"
+    doc11.field_name = "time_interval"
+    doc11.property = "options"
+    doc11.property_type = "Text"
+    doc11.value = "Yearly\nQuarterly\nMonthly\nWeekly\nDaily"
+    doc11.insert()
+
     # doc10 = frappe.new_doc("Custom DocPerm")
     # doc10.parent = "Dashboard Chart"
     # doc10.role = "System Manager"

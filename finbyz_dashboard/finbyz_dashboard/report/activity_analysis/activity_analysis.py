@@ -28,21 +28,8 @@ def get_columns():
 		{ "label": _("Mobile No"),"fieldname": "Mobile No","fieldtype": "Data","width": 100},
 		{ "label": _("Item Name"),"fieldname": "Item Name","fieldtype": "Data","width": 150},
 		{ "label": _("Amount"),"fieldname": "Amount","fieldtype": "Currency","width": 120},
-		{ "label": _("Status"),"fieldname": "Status","fieldtype": "Data","width": 100},
-
+		{ "label": _("Status"),"fieldname": "Status","fieldtype": "Data","width": 100}
 	]
-	# columns = [
-	# 	_("Document") + ":Data:100",
-	# 	_("ID") + ":Dynamic Link/"+ _("Document") +":100",
-	# 	_("Date") + ":Date:100",
-	# 	_("Created By") + ":Link/User:120",
-	# 	_("Title") + ":Data:110",
-	# 	_("Contact Person") + ":Link/Contact:120",
-	# 	_("Mobile No") + "::100",
-	# 	_("Item Name") + ":Data:150",
-	# 	_("Amount") + ":Currency:120",
-	# 	_("Status") + "::100", 
-	# ]
 	return columns
 
 def get_data(filters):
