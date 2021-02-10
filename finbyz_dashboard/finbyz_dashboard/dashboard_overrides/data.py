@@ -27,7 +27,7 @@ import frappe, json, copy, re
 from frappe.model import optional_fields
 from frappe.client import check_parent_permission
 from frappe.model.utils.user_settings import get_user_settings, update_user_settings
-from frappe.utils import flt, cint, get_time, cstr, now_datetime, make_filter_tuple, sanitize_column, getdate, nowdate
+from frappe.utils import flt, cint, get_time, cstr, now_datetime, make_filter_tuple, sanitize_column, getdate, nowdate,add_days
 from frappe.model.meta import get_table_columns
 
 DATE_FORMAT = "%Y-%m-%d"
@@ -203,7 +203,9 @@ def get_timespan_date_range(timespan):
 		"last quarter": [add_to_date(nowdate(), months=-3), nowdate()],
 		"last 6 months": [add_to_date(nowdate(), months=-6), nowdate()],
 		"last year": [add_to_date(nowdate(), years=-1), nowdate()],
+		"yesterday":[get_yesterday(nowdate()),get_yesterday(nowdate())],
 		"today": [nowdate(), nowdate()],
+		"tomorrow":[get_tomorrow(nowdate()),get_tomorrow(nowdate())],
 		"this week": [get_first_day_of_week(nowdate(), as_str=True), nowdate()],
 		"this month": [get_first_day(nowdate(), as_str=True), nowdate()],
 		"this quarter": [get_quarter_start(nowdate(), as_str=True), nowdate()],
@@ -224,3 +226,9 @@ def get_start_fiscal_year_date(dt,as_str= False):
 def get_end_fiscal_year_date(dt,as_str= False):
 	date = getdate(frappe.defaults.get_user_default("year_end_date"))
 	return date.strftime(DATE_FORMAT) if as_str else date
+
+def get_yesterday(dt):
+	return add_days(nowdate(),-1)
+
+def get_tomorrow(dt):
+	return add_days(nowdate(),1)
