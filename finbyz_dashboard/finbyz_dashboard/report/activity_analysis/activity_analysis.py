@@ -19,9 +19,9 @@ def execute(filters=None):
 		return columns, data, None, chart
 	else:
 		columns = get_columns()
-		data, user_list,user_item_list,users = get_data(filters)
-		chart = get_chart_data(user_list,user_item_list,users,filters)
-		return columns, data, None, chart	
+		data = get_data(filters)
+		chart = get_chart_data(data,filters)
+		return columns, data, None, chart
 
 def get_columns_details():
 	columns = [
@@ -127,13 +127,13 @@ def get_chart_data_details(data, filters):
 
 	if total_entries:
 		datasets.append({
-			'title': "Total Quotation",
+			'name': "Total Entries",
 			'values': total_entries
 		})
 	
 	if total_items:
 		datasets.append({
-			'title': "Total Items",
+			'name': "Total Items",
 			'values': total_items
 		})
 
@@ -149,9 +149,9 @@ def get_chart_data_details(data, filters):
 
 def get_columns():
 	columns = [
-		{ "label": _("Created By"),"fieldname": "created_by","fieldtype": "Link","options":"User","width": 150},
-		{ "label": _("Total Entries"),"fieldname": "total_entries","fieldtype": "Int","width": 100},
-		{ "label": _("Total Items"),"fieldname": "total_items","fieldtype": "Int","width": 100},
+		{ "label": _("Created By"),"fieldname": "created_by","fieldtype": "Link","options":"User","width": 200},
+		{ "label": _("Total Entries"),"fieldname": "total_entries","fieldtype": "Int","width": 150},
+		{ "label": _("Total Items"),"fieldname": "total_items","fieldtype": "Int","width": 150},
 	]
 	return columns
 
@@ -163,7 +163,7 @@ def get_data(filters):
 
 	transaction_date = ['Quotation', 'Sales Order', 'Purchase Order']
 
-	data,new_data = [],[]
+	data,new_data,entries_list,items_list,owner_list = [],[],[],[],[]
 	for idx,doc in enumerate(doctype_list):
 		conditions = ''
 		if filters.based_on == "Creation Date":
@@ -176,57 +176,87 @@ def get_data(filters):
 		if filters.from_date: conditions += " and {0} >= '{1}'".format(date, filters.from_date)
 		if filters.to_date: conditions += " and {0} <= '{1}'".format(date, filters.to_date)
 		if filters.user:conditions += " and owner = '{0}'".format(filters.user)
-		
+
 		dt = frappe.db.sql("""
 			SELECT
-				name, owner
+				owner, count(name) as total_entries
 			FROM
 				`tab{doc}`
 			WHERE
 				docstatus < 2
 				{conditions}
+			GROUP BY
+				owner
 			ORDER BY
-				modified DESC""".format(doc=doc, conditions=conditions), as_dict=1)
-		id = 0
-		for item in dt:
+				modified DESC
+		""".format(doc=doc, conditions=conditions), as_dict=1)
+		
+		dt_map = {}
+		user_tuple = '('
+		if dt:
+			for row in dt:
+				if user_tuple.find(row.owner) == -1:
+					user_tuple += "'{}',".format(row.owner)
+				if (row.owner) in dt_map:
+					dt_map[(row.owner)] += row.total_entries
+				else:
+					dt_map[(row.owner)] = row.total_entries
+			user_tuple = user_tuple[:-1]
+			user_tuple += ")"
+			conditions = ""
+			if filters.based_on == "Creation Date":
+				date = 'CAST(p.creation AS DATE)'
+			else:
+				date = 'p.posting_date'
+				if doc in transaction_date:
+					date = 'p.transaction_date'
+
+			if filters.from_date: conditions += " and {0} >= '{1}'".format(date, filters.from_date)
+			if filters.to_date: conditions += " and {0} <= '{1}'".format(date, filters.to_date)
+			if filters.user:conditions += " and p.owner = '{0}'".format(filters.user)
+
 			items = frappe.db.sql("""
-				select owner as item_owner
-				from `tab{}`
-				where parent = '{}'
-			""".format(child_doctype_list[idx],item.name),as_dict=1)
+				select child.owner,count(child.name) as total_items
+				from `tab{}` as child
+				JOIN `tab{}` as p on p.name = child.parent and p.owner = child.owner
+				where child.docstatus < 2 {}
+				group by child.owner
+				ORDER BY child.modified desc
+			""".format(child_doctype_list[idx],doc,conditions),as_dict=1)
 
-			if items:
-				item["item_owner"] = items[0]["item_owner"]
-				for i in items[1:]:
-					data.insert(id+1, {'item_owner': i["item_owner"]})
-					id +=1
-		data += dt
-	
-	user_list = list(map(lambda u: u['owner'] if 'owner' in u else '', data))
-	user_item_list = list(map(lambda u: u['item_owner'] if 'item_owner' in u else '', data))
-	users = list(set(user_list))
+			for row in items:
+				owner_list.append(row.owner)
+				entries_list.append({row.owner:dt_map[(row.owner)]})
+				items_list.append({row.owner:row.total_items})
 
-	total_entries,created_by = [],[]
+	entries_sum = {}
+	for d in entries_list:
+		for k in d.keys():
+			entries_sum[k] = entries_sum.get(k, 0) + d[k]
 
-	for user in users:
-		if user:
-			new_data.append({"created_by":get_user_fullname(user),"total_entries":user_list.count(user),"total_items":user_item_list.count(user)})
-	# new_data.append(created_by)
-	# new_data.append(total_entries)
-	return new_data,user_list,user_item_list,users
+	items_sum = {}
+	for d in items_list:
+		for k in d.keys():
+			items_sum[k] = items_sum.get(k, 0) + d[k]
 
-def get_chart_data(user_list,user_item_list,users,filters):
+	owner_list = list(set(owner_list))
+	for row in owner_list:
+		data.append({"created_by":row,"total_entries":entries_sum[row],"total_items":items_sum[row]})
+		# new_data.append({row.owner:{"total_entries":entries_sum[row],"total_items":items_sum[row]}})
+	# for row in new_data:
+	# 	for k,v in row.items():
+	# 		data.append({"created_by":k,"total_items":v['total_items'],"total_entries":v['total_entries']})
+	return data
+
+def get_chart_data(data,filters):
 
 	total_entries = []
 	total_items = []
 	labels = []
-
-	for user in users:
-		if user:
-			total_entries.append(user_list.count(user))
-			total_items.append(user_item_list.count(user))
-			labels.append(get_user_fullname(user))
-
+	for row in data:
+		total_entries.append(row['total_entries'])
+		total_items.append(row['total_items'])
+		labels.append(row['created_by'])
 	datasets = []
 
 	if total_entries:
