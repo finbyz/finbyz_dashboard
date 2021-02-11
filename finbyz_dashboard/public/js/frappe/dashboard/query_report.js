@@ -66,7 +66,7 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 
 	setup_events() {
 		frappe.realtime.on("report_generated", (data) => {
-			this.toggle_primary_button_disabled(false);
+			// this.toggle_primary_button_disabled(false);
 			if(data.report_name) {
 				this.prepared_report_action = "Rebuild";
 				// If generated report and currently active Prepared Report has same fiters
@@ -700,9 +700,9 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 		}
 	}
 
-	toggle_primary_button_disabled(disable) {
-		this.primary_button.prop('disabled', disable);
-	}
+	// toggle_primary_button_disabled(disable) {
+	// 	this.primary_button.prop('disabled', disable);
+	// }
 
 	show_warning_or_generate_report() {
 		frappe.xcall(
@@ -770,7 +770,7 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 	}
 
 	generate_background_report() {
-		this.toggle_primary_button_disabled(true);
+		// this.toggle_primary_button_disabled(true);
 		let mandatory = this.filters.filter(f => f.df.reqd);
 		let missing_mandatory = mandatory.filter(f => !f.get_value());
 		if (!missing_mandatory.length){
@@ -778,6 +778,7 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 			return new Promise(resolve => frappe.call({
 				method: 'frappe.desk.query_report.background_enqueue_run',
 				type: 'GET',
+				freeze:true,
 				args: {
 					report_name: this.report_name,
 					filters: filters
