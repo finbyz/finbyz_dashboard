@@ -224,8 +224,13 @@ def get_data(filters):
 				ORDER BY child.modified desc
 			""".format(child_doctype_list[idx],doc,conditions),as_dict=1)
 
+# Below Code is for Merge Multiple owners with its keys and values 
+# Example: items = [{"admin":{"total_entries":5,"total_items":10}},
+#	{"admin":{"total_entries":10,"total_items":15}},{"user":{"total_entries":2,"total_items":1}}]
+# in above example list it needs to merge same keys('admin') with its value(which also a dict)
+
 			for row in items:
-				owner_list.append(row.owner)
+				owner_list.append(row.owner)	# Owner List
 				entries_list.append({row.owner:dt_map[(row.owner)]})
 				items_list.append({row.owner:row.total_items})
 
@@ -240,12 +245,10 @@ def get_data(filters):
 			items_sum[k] = items_sum.get(k, 0) + d[k]
 
 	owner_list = list(set(owner_list))
+
 	for row in owner_list:
 		data.append({"created_by":row,"total_entries":entries_sum[row],"total_items":items_sum[row]})
-		# new_data.append({row.owner:{"total_entries":entries_sum[row],"total_items":items_sum[row]}})
-	# for row in new_data:
-	# 	for k,v in row.items():
-	# 		data.append({"created_by":k,"total_items":v['total_items'],"total_entries":v['total_entries']})
+
 	return data
 
 def get_chart_data(data,filters):
