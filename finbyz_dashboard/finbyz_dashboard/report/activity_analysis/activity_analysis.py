@@ -259,7 +259,8 @@ def get_chart_data(data,filters):
 	for row in data:
 		total_entries.append(row['total_entries'])
 		total_items.append(row['total_items'])
-		labels.append(row['created_by'])
+		labels.append(get_user_fullname(row['created_by']))
+		#labels.append(row['created_by'])
 	datasets = []
 
 	if total_entries:
