@@ -49,8 +49,18 @@ def get_data_details(filters):
 
 	transaction_date = ['Quotation', 'Sales Order', 'Purchase Order']
 
+	if filters.get('doctype'):
+		doctype = [filters.doctype]
+		if not filters.doctype == "Stock Entry":
+			child_doctype_list = [filters.doctype + " Item"]
+		else:
+			child_doctype_list = [filters.doctype + " Detail"]
+
 	data = []
 	for idx,doc in enumerate(doctype):
+		title_field = frappe.db.get_value("Property Setter",{"doc_type":doc,"property":'title_field'},'value')
+		if not title_field:
+			title_field = frappe.db.get_value("DocType",doc,'title_field')
 		conditions = ''
 		if filters.based_on == "Creation Date":
 			date = 'CAST(creation AS DATE)'
@@ -65,7 +75,7 @@ def get_data_details(filters):
 		
 		dt = frappe.db.sql("""
 			SELECT
-				name as 'ID', {date} as 'Date', owner as 'Created By', title as 'Title'
+				name as 'ID', {date} as 'Date', owner as 'Created By', {title_field} as 'Title'
 			FROM
 				`tab{doc}`
 			WHERE
@@ -73,7 +83,7 @@ def get_data_details(filters):
 				{conditions}
 
 			ORDER BY
-				modified DESC""".format(date=date, doc=doc, conditions=conditions), as_dict=1)
+				modified DESC""".format(date=date, title_field=title_field,doc=doc, conditions=conditions), as_dict=1)
 
 		d = dt[:]
 		id = 0
@@ -164,6 +174,14 @@ def get_data(filters):
 	transaction_date = ['Quotation', 'Sales Order', 'Purchase Order']
 
 	data,new_data,entries_list,items_list,owner_list = [],[],[],[],[]
+
+	if filters.get('doctype'):
+		doctype_list = [filters.doctype]
+		if not filters.doctype == "Stock Entry":
+			child_doctype_list = [filters.doctype + " Item"]
+		else:
+			child_doctype_list = [filters.doctype + " Detail"]
+
 	for idx,doc in enumerate(doctype_list):
 		conditions = ''
 		if filters.based_on == "Creation Date":
@@ -176,7 +194,6 @@ def get_data(filters):
 		if filters.from_date: conditions += " and {0} >= '{1}'".format(date, filters.from_date)
 		if filters.to_date: conditions += " and {0} <= '{1}'".format(date, filters.to_date)
 		if filters.user:conditions += " and owner = '{0}'".format(filters.user)
-
 		dt = frappe.db.sql("""
 			SELECT
 				owner, count(name) as total_entries
