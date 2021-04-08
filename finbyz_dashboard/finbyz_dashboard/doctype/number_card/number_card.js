@@ -240,12 +240,14 @@ frappe.ui.form.on('Number Card', {
 		// Set dynamic filters for reports
 		if (frm.doc.type == 'Report') {
 			let set_filters = false;
-			frm.filters.forEach(f => {
-				if (is_dynamic_filter(f)) {
-					filters[f.fieldname] = f.default;
-					set_filters = true;
-				}
-			});
+			if(frm.filters){
+				frm.filters.forEach(f => {
+					if (is_dynamic_filter(f)) {
+						filters[f.fieldname] = f.default;
+						set_filters = true;
+					}
+				});
+			}
 			set_filters && frm.set_value('filters_json', JSON.stringify(filters));
 		}
 
@@ -271,7 +273,7 @@ frappe.ui.form.on('Number Card', {
 				});
 				filters_set = true;
 			}
-		} else if (frm.filters.length) {
+		} else if (frm.filters && frm.filters.length) {
 			fields = frm.filters.filter(f => f.fieldname);
 			fields.map(f => {
 				if (filters[f.fieldname]) {
