@@ -110,7 +110,7 @@ def insert_items(data, row, doc, id):
 	if items:
 		row["Item Name"] = items[0]["Item Name"]
 		row["Amount"] = items[0]["Amount"]
-		row["Owner"] = items[0]["Owner"]
+		row["Owner"] = get_user_fullname(items[0]["Owner"])
 
 	for i in items[1:]:
 		data.insert(id, {'Item Name': i['Item Name'], 'Amount': i["Amount"], 'Owner': get_user_fullname(i["Owner"])})
@@ -132,7 +132,7 @@ def get_chart_data_details(data, filters):
 		if user:
 			total_entries.append(user_list.count(user))
 			total_items.append(user_item_list.count(user))
-			labels.append(user)
+			labels.append((user))
 
 	datasets = []
 
