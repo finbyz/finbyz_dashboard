@@ -63,13 +63,13 @@ frappe.ui.form.on('Dashboard Chart', {
 		}
 	},
 
-	is_standard: function(frm) {
-		if (frappe.boot.developer_mod) {
-			frm.trigger('render_dynamic_filters_table');
-		} else {
-			frm.set_df_property("dynamic_filters", "hidden", 1);
-		}
-	},
+	// is_standard: function(frm) {
+	// 	if (frappe.boot.developer_mod) {
+	// 		frm.trigger('render_dynamic_filters_table');
+	// 	} else {
+	// 		frm.set_df_property("dynamic_filters", "hidden", 1);
+	// 	}
+	// },
 
 	source: function(frm) {
 		frm.trigger("show_filters");
@@ -250,10 +250,7 @@ frappe.ui.form.on('Dashboard Chart', {
 				frm.chart_filters = filters;
 			}
 			frm.trigger('render_filters_table');
-
-			if (frappe.boot.developer_mode) {
-				frm.trigger('render_dynamic_filters_table');
-			}
+			frm.trigger('render_dynamic_filters_table');
 		});
 	},
 
