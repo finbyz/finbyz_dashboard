@@ -59,10 +59,6 @@ frappe.ui.form.on('Number Card', {
 		frm.trigger('render_dynamic_filters_table');
 	},
 
-	is_standard: function(frm) {
-		frm.trigger('render_dynamic_filters_table');
-	},
-
 	set_filters_description: function(frm) {
 		if (frm.doc.type == 'Custom') {
 			frm.fields_dict.filters_config.set_description(`
