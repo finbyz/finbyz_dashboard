@@ -90,6 +90,7 @@ def get_data_details(filters):
 
 		for row in d:
 			row["Document"] = doc
+			row["Created By"] = get_user_fullname(row["Created By"])
 			id = insert_items(dt, row, child_doctype_list[idx], id+1)
 
 		data += dt
@@ -109,10 +110,10 @@ def insert_items(data, row, doc, id):
 	if items:
 		row["Item Name"] = items[0]["Item Name"]
 		row["Amount"] = items[0]["Amount"]
-		row["Owner"] = items[0]["Owner"]
+		row["Owner"] = get_user_fullname(items[0]["Owner"])
 
 	for i in items[1:]:
-		data.insert(id, {'Item Name': i['Item Name'], 'Amount': i["Amount"], 'Owner': i["Owner"]})
+		data.insert(id, {'Item Name': i['Item Name'], 'Amount': i["Amount"], 'Owner': get_user_fullname(i["Owner"])})
 		id +=1
 
 	return id
@@ -131,7 +132,7 @@ def get_chart_data_details(data, filters):
 		if user:
 			total_entries.append(user_list.count(user))
 			total_items.append(user_item_list.count(user))
-			labels.append(get_user_fullname(user))
+			labels.append((user))
 
 	datasets = []
 
@@ -264,7 +265,7 @@ def get_data(filters):
 	owner_list = list(set(owner_list))
 
 	for row in owner_list:
-		data.append({"created_by":row,"total_entries":entries_sum[row],"total_items":items_sum[row]})
+		data.append({"created_by":get_user_fullname(row),"total_entries":entries_sum[row],"total_items":items_sum[row]})
 
 	return data
 
@@ -276,7 +277,7 @@ def get_chart_data(data,filters):
 	for row in data:
 		total_entries.append(row['total_entries'])
 		total_items.append(row['total_items'])
-		labels.append(get_user_fullname(row['created_by']))
+		labels.append(row['created_by'])
 		#labels.append(row['created_by'])
 	datasets = []
 

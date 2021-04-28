@@ -146,9 +146,12 @@ def add_data(employee_map, att_map, filters, holiday_map, conditions, default_ho
 				if emp_holiday_list in holiday_map:
 					for idx, ele in enumerate(holiday_map[emp_holiday_list]):
 						if day+1 == holiday_map[emp_holiday_list][idx][0]:
-							if holiday_map[emp_holiday_list][idx][1]:
-								status = "Weekly Off"
-							else:
+							try:
+								if holiday_map[emp_holiday_list][idx][1]:
+									status = "Weekly Off"
+								else:
+									status = "Holiday"
+							except:
 								status = "Holiday"
 							total_h += 1
 

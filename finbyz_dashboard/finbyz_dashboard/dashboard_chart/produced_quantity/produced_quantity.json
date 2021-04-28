@@ -15,7 +15,7 @@
  "is_public": 1,
  "is_standard": 1,
  "last_synced_on": "2021-02-02 15:50:01.503276",
- "modified": "2021-02-03 10:29:35.353662",
+ "modified": "2021-04-16 09:43:11.897418",
  "modified_by": "Administrator",
  "module": "Finbyz Dashboard",
  "name": "Produced Quantity",
@@ -26,6 +26,6 @@
  "timespan": "Last Year",
  "type": "Line",
  "use_report_chart": 0,
- "value_based_on": "produced_quantity",
+ "value_based_on": "produced_qty",
  "y_axis": []
 }
