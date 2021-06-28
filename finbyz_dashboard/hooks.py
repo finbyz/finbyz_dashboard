@@ -222,9 +222,9 @@ from erpnext.accounts.report.gross_profit import gross_profit
 gross_profit.execute = gp_execute
 
 #Item Wise Purchase Register Report Override For Chart
-from finbyz_dashboard.finbyz_dashboard.report.item_wise_purchase_register import execute as iwp_execute
-from erpnext.accounts.report.item_wise_purchase_register import item_wise_purchase_register
-item_wise_purchase_register.execute = iwp_execute
+# from finbyz_dashboard.finbyz_dashboard.report.item_wise_purchase_register import execute as iwp_execute
+# from erpnext.accounts.report.item_wise_purchase_register import item_wise_purchase_register
+# item_wise_purchase_register.execute = iwp_execute
 
 # from finbyz_dashboard.finbyz_dashboard.dashboard_overrides.dashboard_utils import sync_dashboards
 # sync_dashboards('finbyz_dashboard')
